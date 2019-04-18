@@ -20,7 +20,7 @@ export class AppComponent {
 
   // save button deklaration
   saveButtonOptions = {
-    text: 'Speichern',
+    text: 'save',
     type: 'success',
     onClick: (e) => {
       this.clickSave.bind(this)(e);
@@ -29,13 +29,13 @@ export class AppComponent {
 
   // abort button deklaration
   abortButtonOptions: any = {
-    text: 'Abbrechen',
+    text: 'cancel',
     type: 'danger',
     icon: 'close',
     onClick: () => this.clickAbort.bind(this)(),
   };
 
-  buttonText = 'Popup öffnen';
+  buttonText = 'open popup';
   newFormData = {};
   sexOptions: any;
 
