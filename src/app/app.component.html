@@ -1,8 +1,26 @@
 <dx-button [stylingMode]="contained" [type]="normal" [text]="buttonText" [width]="200" (onClick)="openPopup($event)"
         (onEscapeKey)="true">
 </dx-button>
+<dx-scroll-view>
 
 <dx-popup (onInitialized)="onPopupInit($event)" title="Person erstellen" [showCloseButton]="false" [visible]="visible"
+    <h3 style="margin: 15px 25px;">Bug reproduction steps</h3>
+    <ol style="margin-top: 0; line-height: 1.5rem;">
+        <li>Start Safari and open this application on an iPad Pro in Landscape mode or use a Mac and Xcode to emulate the iPad Pro.</li>
+        <li>At the upper left corner there is a button with "Popup öffnen". Click this button to open the popup.</li>
+        <li>After the popup has opened click the little triangle at the right side of the input field that is labeled "Lieblingsfarbe" to open the color box.</li>
+    </ol>
+    <br>
+    <h4 style="margin: 15px 25px;">Expected behavior</h4>
+    <p style="margin: 8px 30px;">
+        The color box opens and is able without restrictions.
+    </p>
+    <br>
+    <h4 style="margin: 15px 25px;">Actual behavior</h4>
+    <p style="margin: 8px 30px;">
+        The color box opens. At the same time the keyboard opens moving the color box upwards so that most of the color box is off screen and therefor not usable.
+    </p>
+</dx-scroll-view>
         [showTitle]="true" maxHeight="700" maxWidth="1170">
     <dxi-toolbar-item toolbar="bottom" location="before" widget="dxButton" [options]="abortButtonOptions"></dxi-toolbar-item>
     <dxi-toolbar-item toolbar="bottom" location="after" widget="dxButton" [options]="saveButtonOptions"></dxi-toolbar-item>

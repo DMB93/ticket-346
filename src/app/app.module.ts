@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScreenService } from './shared/services';
 import { AppRoutingModule } from './app-routing.module';
-import { DxButtonModule, DxPopupModule, DxTabPanelModule, DxFormModule, DxScrollViewModule } from 'devextreme-angular';
+import { DxButtonModule, DxPopupModule, DxTabPanelModule, DxFormModule, DxScrollViewModule, DxBoxModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -14,10 +14,10 @@ import { DxButtonModule, DxPopupModule, DxTabPanelModule, DxFormModule, DxScroll
     BrowserModule,
     AppRoutingModule,
     DxButtonModule,
-    DxPopupModule,
-    DxTabPanelModule,
     DxFormModule,
-    DxScrollViewModule
+    DxPopupModule,
+    DxScrollViewModule,
+    DxTabPanelModule,
   ],
   providers: [
     ScreenService
